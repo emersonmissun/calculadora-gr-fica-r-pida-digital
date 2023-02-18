@@ -1,0 +1,11 @@
+# Pastas e arquivos que não devem ser versionados
+
+# Pastas
+.vscode
+
+# Arquivos
+*.log
+*.lock
+
+# Arquivos de dados sensíveis
+
