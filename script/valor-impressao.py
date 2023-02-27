@@ -40,50 +40,252 @@ valor_pb = pd.read_excel('data/Dados_Entrada/expenses/impressao_custos.xlsx', sh
 # print(valor_cor)	# Exibe os valores de impressão colorida na tela do terminal 
 # print(valor_pb)	# Exibe os valores de impressão preto e branco na tela do terminal
 
-## Valores de impressão cor
-valor_img_cor = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A4'].item() # NOTE: o item() retorna o valor do item da coluna especificada 
-valor_img_cor = locale.currency(valor_img_cor, grouping=True)
+## NOTE: Valores de impressão cor formato A3 
+valor_img_cor_a3 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A3'].item() 
+valor_img_cor_a3 = locale.currency(valor_img_cor_a3, grouping=True)
 
-valor_txt_cor = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A4'].item()
-valor_txt_cor = locale.currency(valor_txt_cor, grouping=True)
+valor_txt_cor_a3 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A3'].item()
+valor_txt_cor_a3 = locale.currency(valor_txt_cor_a3, grouping=True)
 
-valor_txt_img_cor = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A4'].item()
-valor_txt_img_cor = locale.currency(valor_txt_img_cor, grouping=True)
+valor_txt_img_cor_a3 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A3'].item()
+valor_txt_img_cor_a3 = locale.currency(valor_txt_img_cor_a3, grouping=True)
 
-## Valores de impressão PB
-valor_img_pb = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A4_PB'].item()
-valor_img_pb = locale.currency(valor_img_pb, grouping=True)
+## NOTE: Valores de impressão PB formato A3
+valor_img_pb_a3 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A3_PB'].item()
+valor_img_pb_a3 = locale.currency(valor_img_pb_a3, grouping=True)
 
-valor_txt_pb = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A4_PB'].item()
-valor_txt_pb = locale.currency(valor_txt_pb, grouping=True)
+valor_txt_pb_a3 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A3_PB'].item()
+valor_txt_pb_a3 = locale.currency(valor_txt_pb_a3, grouping=True)
 
-valor_txt_img_pb = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A4_PB'].item()
-valor_txt_img_pb = locale.currency(valor_txt_img_pb, grouping=True)
+valor_txt_img_pb_a3 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A3_PB'].item()
+valor_txt_img_pb_a3 = locale.currency(valor_txt_img_pb_a3, grouping=True)
 
-print("")
+## NOTE: Valores de impressão cor formato A4 
+valor_img_cor_a4 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A4'].item()  
+valor_img_cor_a4 = locale.currency(valor_img_cor_a4, grouping=True)
+
+valor_txt_cor_a4 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A4'].item()
+valor_txt_cor_a4 = locale.currency(valor_txt_cor_a4, grouping=True)
+
+valor_txt_img_cor_a4 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A4'].item()
+valor_txt_img_cor_a4 = locale.currency(valor_txt_img_cor_a4, grouping=True)
+
+## NOTE: Valores de impressão PB formato A4
+valor_img_pb_a4 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A4_PB'].item()
+valor_img_pb_a4 = locale.currency(valor_img_pb_a4, grouping=True)
+
+valor_txt_pb_a4 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A4_PB'].item()
+valor_txt_pb_a4 = locale.currency(valor_txt_pb_a4, grouping=True)
+
+valor_txt_img_pb_a4 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A4_PB'].item()
+valor_txt_img_pb_a4 = locale.currency(valor_txt_img_pb_a4, grouping=True)
+
+## NOTE: Valores de impressão cor formato A5
+valor_img_cor_a5 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A5'].item()
+valor_img_cor_a5 = locale.currency(valor_img_cor_a5, grouping=True)
+
+valor_txt_cor_a5 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A5'].item()
+valor_txt_cor_a5 = locale.currency(valor_txt_cor_a5, grouping=True)
+
+valor_txt_img_cor_a5 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A5'].item()
+valor_txt_img_cor_a5 = locale.currency(valor_txt_img_cor_a5, grouping=True)
+
+## NOTE: Valores de impressão PB formato A5
+valor_img_pb_a5 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A5_PB'].item()
+valor_img_pb_a5 = locale.currency(valor_img_pb_a5, grouping=True)
+
+valor_txt_pb_a5 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A5_PB'].item()
+valor_txt_pb_a5 = locale.currency(valor_txt_pb_a5, grouping=True)
+
+valor_txt_img_pb_a5 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A5_PB'].item()
+valor_txt_img_pb_a5 = locale.currency(valor_txt_img_pb_a5, grouping=True)
+
+## NOTE: Valores de impressão cor formato A6
+valor_img_cor_a6 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A6'].item()
+valor_img_cor_a6 = locale.currency(valor_img_cor_a6, grouping=True)
+
+valor_txt_cor_a6 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A6'].item()
+valor_txt_cor_a6 = locale.currency(valor_txt_cor_a6, grouping=True)
+
+valor_txt_img_cor_a6 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A6'].item()
+valor_txt_img_cor_a6 = locale.currency(valor_txt_img_cor_a6, grouping=True)
+
+## NOTE: Valores de impressão PB formato A6
+valor_img_pb_a6 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A6_PB'].item()
+valor_img_pb_a6 = locale.currency(valor_img_pb_a6, grouping=True)
+
+valor_txt_pb_a6 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A6_PB'].item()
+valor_txt_pb_a6 = locale.currency(valor_txt_pb_a6, grouping=True)
+
+valor_txt_img_pb_a6 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A6_PB'].item()
+valor_txt_img_pb_a6 = locale.currency(valor_txt_img_pb_a6, grouping=True)
+
+## NOTE: Valores de impressão cor formato A7
+valor_img_cor_a7 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A7'].item()
+valor_img_cor_a7 = locale.currency(valor_img_cor_a7, grouping=True)
+
+valor_txt_cor_a7 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A7'].item()
+valor_txt_cor_a7 = locale.currency(valor_txt_cor_a7, grouping=True)
+
+valor_txt_img_cor_a7 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A7'].item()
+valor_txt_img_cor_a7 = locale.currency(valor_txt_img_cor_a7, grouping=True)
+
+## NOTE: Valores de impressão PB formato A7
+valor_img_pb_a7 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A7_PB'].item()
+valor_img_pb_a7 = locale.currency(valor_img_pb_a7, grouping=True)
+
+valor_txt_pb_a7 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A7_PB'].item()
+valor_txt_pb_a7 = locale.currency(valor_txt_pb_a7, grouping=True)
+
+valor_txt_img_pb_a7 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A7_PB'].item()
+valor_txt_img_pb_a7 = locale.currency(valor_txt_img_pb_a7, grouping=True)
+
+## NOTE: Valores de impressão cor formato A8
+valor_img_cor_a8 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A8'].item()
+valor_img_cor_a8 = locale.currency(valor_img_cor_a8, grouping=True)
+
+valor_txt_cor_a8 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A8'].item()
+valor_txt_cor_a8 = locale.currency(valor_txt_cor_a8, grouping=True)
+
+valor_txt_img_cor_a8 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A8'].item()
+valor_txt_img_cor_a8 = locale.currency(valor_txt_img_cor_a8, grouping=True)
+
+## NOTE: Valores de impressão PB formato A8
+valor_img_pb_a8 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A8_PB'].item()
+valor_img_pb_a8 = locale.currency(valor_img_pb_a8, grouping=True)
+
+valor_txt_pb_a8 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A8_PB'].item()
+valor_txt_pb_a8 = locale.currency(valor_txt_pb_a8, grouping=True)
+
+valor_txt_img_pb_a8 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A8_PB'].item()
+valor_txt_img_pb_a8 = locale.currency(valor_txt_img_pb_a8, grouping=True)
+
+## NOTE: Valores de impressão cor formato A9
+valor_img_cor_a9 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A9'].item()
+valor_img_cor_a9 = locale.currency(valor_img_cor_a9, grouping=True)
+
+valor_txt_cor_a9 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A9'].item()
+valor_txt_cor_a9 = locale.currency(valor_txt_cor_a9, grouping=True)
+
+valor_txt_img_cor_a9 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A9'].item()
+valor_txt_img_cor_a9 = locale.currency(valor_txt_img_cor_a9, grouping=True)
+
+## NOTE: Valores de impressão PB formato A9
+valor_img_pb_a9 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A9_PB'].item()
+valor_img_pb_a9 = locale.currency(valor_img_pb_a9, grouping=True)
+
+valor_txt_pb_a9 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A9_PB'].item()
+valor_txt_pb_a9 = locale.currency(valor_txt_pb_a9, grouping=True)
+
+valor_txt_img_pb_a9 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A9_PB'].item()
+valor_txt_img_pb_a9 = locale.currency(valor_txt_img_pb_a9, grouping=True)
+
+## NOTE: Valores de impressão cor formato A10
+valor_img_cor_a10 = valor_cor.loc[valor_cor['tipo'] == 'IMG_COR', 'PRINT_A10'].item()
+valor_img_cor_a10 = locale.currency(valor_img_cor_a10, grouping=True)
+
+valor_txt_cor_a10 = valor_cor.loc[valor_cor['tipo'] == 'TXT_COR', 'PRINT_A10'].item()
+valor_txt_cor_a10 = locale.currency(valor_txt_cor_a10, grouping=True)
+
+valor_txt_img_cor_a10 = valor_cor.loc[valor_cor['tipo'] == 'TXT_IMG_COR', 'PRINT_A10'].item()
+valor_txt_img_cor_a10 = locale.currency(valor_txt_img_cor_a10, grouping=True)
+
+## NOTE: Valores de impressão PB formato A10
+valor_img_pb_a10 = valor_pb.loc[valor_pb['tipo_pb'] == 'IMG_PB', 'PRINT_A10_PB'].item()
+valor_img_pb_a10 = locale.currency(valor_img_pb_a10, grouping=True)
+
+valor_txt_pb_a10 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_PB', 'PRINT_A10_PB'].item()
+valor_txt_pb_a10 = locale.currency(valor_txt_pb_a10, grouping=True)
+
+valor_txt_img_pb_a10 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A10_PB'].item()
+valor_txt_img_pb_a10 = locale.currency(valor_txt_img_pb_a10, grouping=True)
+
+## Exibir valores de impressão
 print("-------------------------------------------------------------------")
-print("Valores de impressão colorida e preto e branco")
-print("Print Textos PB =", valor_txt_pb) # 0.01
-print("Print Textos e Imagens PB =", valor_txt_img_pb) # 0.01
-print("Print Foto PB =", valor_img_pb) # 0.01
-
+print("Valores de impressão A3")
+print("Print Textos PB A3 =", valor_txt_pb_a3)
+print("Print Textos e Imagens PB A3 =", valor_txt_img_pb_a3)
+print("Print Foto PB A3 =", valor_img_pb_a3)
 print("")
-print("Valores de impressão colorida e preto e branco")
-print("Print Textos Cor =", valor_txt_cor) # 0.01
-print("Print Textos e Imagens Cor =", valor_txt_img_cor) # 0.01
-print('Print Foto Cor =', valor_img_cor) # 0.01
+print("Print Textos Cor A3 =", valor_txt_cor_a3)
+print("Print Textos e Imagens Cor A3 =", valor_txt_img_cor_a3)
+print('Print Foto Cor A3 =', valor_img_cor_a3)
 print("-------------------------------------------------------------------")
 print("")
 
-# Exemplo de saída do script:
-# Print Textos PB = R$ 0,01
-# Print Textos e Imagens PB = R$ 0,01
-# Print Foto PB = R$ 0,01
+print("Valores de impressão A4")
+print("Print Textos PB A4 =", valor_txt_pb_a4)
+print("Print Textos e Imagens PB A4 =", valor_txt_img_pb_a4)
+print("Print Foto PB A4 =", valor_img_pb_a4)
+print("")
+print("Print Textos Cor A4 =", valor_txt_cor_a4)
+print("Print Textos e Imagens Cor A4 =", valor_txt_img_cor_a4)
+print('Print Foto Cor A4 =', valor_img_cor_a4)
+print("-------------------------------------------------------------------")
+print("")
 
-# Print Textos Cor = R$ 0,01
-# Print Textos e Imagens Cor = R$ 0,01
-# Print Foto Cor = R$ 0,01
+print("Valores de impressão A5")
+print("Print Textos PB A5 =", valor_txt_pb_a5)
+print("Print Textos e Imagens PB A5 =", valor_txt_img_pb_a5)
+print("Print Foto PB A5 =", valor_img_pb_a5)
+print("")
+print("Print Textos Cor A5 =", valor_txt_cor_a5)
+print("Print Textos e Imagens Cor A5 =", valor_txt_img_cor_a5)
+print('Print Foto Cor A5 =', valor_img_cor_a5)
+print("-------------------------------------------------------------------")
+print("")
 
-# Fim do script
+print("Valores de impressão A6")
+print("Print Textos PB A6 =", valor_txt_pb_a6)
+print("Print Textos e Imagens PB A6 =", valor_txt_img_pb_a6)
+print("Print Foto PB A6 =", valor_img_pb_a6)
+print("")
+print("Print Textos Cor A6 =", valor_txt_cor_a6)
+print("Print Textos e Imagens Cor A6 =", valor_txt_img_cor_a6)
+print('Print Foto Cor A6 =', valor_img_cor_a6)
+print("-------------------------------------------------------------------")
+print("")
 
+print("Valores de impressão A7")
+print("Print Textos PB A7 =", valor_txt_pb_a7)
+print("Print Textos e Imagens PB A7 =", valor_txt_img_pb_a7)
+print("Print Foto PB A7 =", valor_img_pb_a7)
+print("")
+print("Print Textos Cor A7 =", valor_txt_cor_a7)
+print("Print Textos e Imagens Cor A7 =", valor_txt_img_cor_a7)
+print('Print Foto Cor A7 =', valor_img_cor_a7)
+print("-------------------------------------------------------------------")
+print("")
+
+print("Valores de impressão A8")
+print("Print Textos PB A8 =", valor_txt_pb_a8)
+print("Print Textos e Imagens PB A8 =", valor_txt_img_pb_a8)
+print("Print Foto PB A8 =", valor_img_pb_a8)
+print("")
+print("Print Textos Cor A8 =", valor_txt_cor_a8)
+print("Print Textos e Imagens Cor A8 =", valor_txt_img_cor_a8)
+print('Print Foto Cor A8 =', valor_img_cor_a8)
+print("-------------------------------------------------------------------")
+print("")
+
+print("Valores de impressão A9")
+print("Print Textos PB A9 =", valor_txt_pb_a9)
+print("Print Textos e Imagens PB A9 =", valor_txt_img_pb_a9)
+print("Print Foto PB A9 =", valor_img_pb_a9)
+print("")
+print("Print Textos Cor A9 =", valor_txt_cor_a9)
+print("Print Textos e Imagens Cor A9 =", valor_txt_img_cor_a9)
+print('Print Foto Cor A9 =', valor_img_cor_a9)
+print("-------------------------------------------------------------------")
+print("")
+
+print("Valores de impressão A10")
+print("Print Textos PB A10 =", valor_txt_pb_a10)
+print("Print Textos e Imagens PB A10 =", valor_txt_img_pb_a10)
+print("Print Foto PB A10 =", valor_img_pb_a10)
+print("")
+print("Print Textos Cor A10 =", valor_txt_cor_a10)
+print("Print Textos e Imagens Cor A10 =", valor_txt_img_cor_a10)
+print('Print Foto Cor A10 =', valor_img_cor_a10)
+print("-------------------------------------------------------------------")
 print("")
