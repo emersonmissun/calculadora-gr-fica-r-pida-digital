@@ -5,7 +5,7 @@
 
 # Arquivos
 *.log
-*.lock
+*.xlsx#
 .gitignore
 
 # Arquivos de dados sensíveis
