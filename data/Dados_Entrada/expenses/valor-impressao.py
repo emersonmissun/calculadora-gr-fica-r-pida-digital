@@ -8,24 +8,24 @@
 # Versão: 0.1
 
 # Linguagem de programação: Python 3.8.5
-# Bibliotecas e módulos: pandas, locale 
-# Testado e homologado nos sistemas operacionais: 
-	# Linux Ubuntu 20.04.1 LTS
-# Link do repositório: 
-    # https://github.com/EmersonMissun/valor-impressao
+# Bibliotecas e módulos: pandas, locale
+# Testado e homologado nos sistemas operacionais:
+# Linux Ubuntu 20.04.1 LTS
+# Link do repositório:
+# https://github.com/EmersonMissun/valor-impressao
 
 # Suporte: Nerds na Cadeira Tecnologia e Informática
-	# Site: https://nerdsnacadeira.com.br
-	# E-mail: nerdsnacadeira@gmail.com
-	# Telefone: (61) 9 8459-0135
+# Site: https://nerdsnacadeira.com.br
+# E-mail: nerdsnacadeira@gmail.com
+# Telefone: (61) 9 8459-0135
 # Licença: GNU General Public License v3.0
- 
 
-# Descrição: Script para carregar os valores de impressão colorida e preto e branco de uma planilha e retornar os valores para o script principal do programa. 
+
+# Descrição: Script para carregar os valores de impressão colorida e preto e branco de uma planilha e retornar os valores para o script principal do programa.
 # O arquivo excel deve estar na pasta data/Dados_Entrada/expenses/impressao_custos.xlsx.
 # O arquivo excel deve conter duas abas, uma para impressão colorida e outra para impressão preto e branco.
-# A aba de impressão colorida deve conter as colunas: tipo, PRINT_A4, PRINT_A3, PRINT_A2, PRINT_A1, PRINT_A0, PRINT_A0+ e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_COR, TXT_COR, TXT_IMG_COR). 
-# A aba de impressão preto e branco deve conter as colunas: tipo_pb, PRINT_A4_PB, PRINT_A3_PB, PRINT_A2_PB, PRINT_A1_PB, PRINT_A0_PB, PRINT_A0+_PB e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_PB, TXT_PB, TXT_IMG_PB). 
+# A aba de impressão colorida deve conter as colunas: tipo, PRINT_A4, PRINT_A3, PRINT_A2, PRINT_A1, PRINT_A0, PRINT_A0+ e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_COR, TXT_COR, TXT_IMG_COR).
+# A aba de impressão preto e branco deve conter as colunas: tipo_pb, PRINT_A4_PB, PRINT_A3_PB, PRINT_A2_PB, PRINT_A1_PB, PRINT_A0_PB, PRINT_A0+_PB e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_PB, TXT_PB, TXT_IMG_PB).
 
 
 # Importar bibliotecas e módulos necessários para o script funcionar corretamente 
@@ -289,3 +289,4 @@ print("Print Textos e Imagens Cor A10 =", valor_txt_img_cor_a10)
 print('Print Foto Cor A10 =', valor_img_cor_a10)
 print("-------------------------------------------------------------------")
 print("")
+
