@@ -14,7 +14,7 @@ valor_mbase = pd.read_excel('data/Dados_Entrada/expenses/Materiais.xlsx', sheet_
 print(valor_mbase)
 print(" ")
 
-# Definir os valores de cada papel Sulti 75g Branco
+# Definir os valores de cada papel Sulfite 75g Branco
 valor_sulfite75A3 = valor_mbase.loc[valor_mbase['MBASE'] == 'Sulfite 75g Branco', 'PRECO_MIDIA_A3'].item() 
 valor_sulfite75A3 = locale.currency(valor_sulfite75A3, grouping=True)
 
