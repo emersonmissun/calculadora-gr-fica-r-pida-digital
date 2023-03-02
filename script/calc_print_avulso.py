@@ -4,8 +4,8 @@
 # Este script calcula o valor de impressão de um arquivo em PDF
 
 # Importando as variáveis dos arquivos externos
-from papeis_var import valor_mbase
-from valor_impressao import valor_cor, valor_pb
+from ..data.Dados_Entrada.expenses.papeis_var import valor_mbase
+from ..data.Dados_Entrada.expenses.valor_impressao import valor_cor, valor_pb
 
 # Pedindo as informações do usuário
 tipo_impressao = int(input("Digite 1 para impressão preto e branco, 2 para colorida ou 3 para mista: "))

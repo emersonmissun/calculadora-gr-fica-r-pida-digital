@@ -1,32 +1,6 @@
 #! /bin/env python3
 
-# Preço de impressão colorida e preto e branco
-
-# Autor: Emerson Missun
-# Data: 2020-10-29
-# Atualização: 2020-10-29
-# Versão: 0.1
-
-# Linguagem de programação: Python 3.8.5
-# Bibliotecas e módulos: pandas, locale
-# Testado e homologado nos sistemas operacionais:
-# Linux Ubuntu 20.04.1 LTS
-# Link do repositório:
-# https://github.com/EmersonMissun/valor-impressao
-
-# Suporte: Nerds na Cadeira Tecnologia e Informática
-# Site: https://nerdsnacadeira.com.br
-# E-mail: nerdsnacadeira@gmail.com
-# Telefone: (61) 9 8459-0135
-# Licença: GNU General Public License v3.0
-
-
-# Descrição: Script para carregar os valores de impressão colorida e preto e branco de uma planilha e retornar os valores para o script principal do programa.
-# O arquivo excel deve estar na pasta data/Dados_Entrada/expenses/impressao_custos.xlsx.
-# O arquivo excel deve conter duas abas, uma para impressão colorida e outra para impressão preto e branco.
-# A aba de impressão colorida deve conter as colunas: tipo, PRINT_A4, PRINT_A3, PRINT_A2, PRINT_A1, PRINT_A0, PRINT_A0+ e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_COR, TXT_COR, TXT_IMG_COR).
-# A aba de impressão preto e branco deve conter as colunas: tipo_pb, PRINT_A4_PB, PRINT_A3_PB, PRINT_A2_PB, PRINT_A1_PB, PRINT_A0_PB, PRINT_A0+_PB e demais formatos comercializados e os valores de impressão para cada tipo de impressão (ex.: IMG_PB, TXT_PB, TXT_IMG_PB).
-
+# Preço de impressão colorida e preto e branco por formato de papel A3, A4 e A5
 
 # Importar bibliotecas e módulos necessários para o script funcionar corretamente 
 import pandas as pd
@@ -200,93 +174,159 @@ valor_txt_pb_a10 = locale.currency(valor_txt_pb_a10, grouping=True)
 valor_txt_img_pb_a10 = valor_pb.loc[valor_pb['tipo_pb'] == 'TXT_IMG_PB', 'PRINT_A10_PB'].item()
 valor_txt_img_pb_a10 = locale.currency(valor_txt_img_pb_a10, grouping=True)
 
+### Iniciar variáveis com preços de impressão colorida e preto e branco para cada formato de impressão ###
+img_cor_ = {
+	"A3": valor_img_cor_a3,
+	"A4": valor_img_cor_a4,
+	"A5": valor_img_cor_a5, 
+	"A6": valor_img_cor_a6,
+	"A7": valor_img_cor_a7,
+	"A8": valor_img_cor_a8,
+	"A9": valor_img_cor_a9,
+	"A10": valor_img_cor_a10
+}
+
+txt_cor_ = {
+    "A3": valor_txt_cor_a3,
+    "A4": valor_txt_cor_a4,
+    "A5": valor_txt_cor_a5,
+    "A6": valor_txt_cor_a6,
+    "A7": valor_txt_cor_a7,
+    "A8": valor_txt_cor_a8,
+    "A9": valor_txt_cor_a9,
+    "A10": valor_txt_cor_a10
+}
+
+txt_img_cor = {
+    "A3": valor_txt_img_cor_a3,
+    "A4": valor_txt_img_cor_a4,
+    "A5": valor_txt_img_cor_a5,
+    "A6": valor_txt_img_cor_a6,
+    "A7": valor_txt_img_cor_a7,
+    "A8": valor_txt_img_cor_a8,
+    "A9": valor_txt_img_cor_a9,
+    "A10": valor_txt_img_cor_a10
+}
+
+img_pb = {
+    "A3": valor_img_pb_a3,
+    "A4": valor_img_pb_a4,
+    "A5": valor_img_pb_a5,
+    "A6": valor_img_pb_a6,
+    "A7": valor_img_pb_a7,
+    "A8": valor_img_pb_a8,
+    "A9": valor_img_pb_a9,
+    "A10": valor_img_pb_a10
+}
+
+txt_pb = {
+    "A3": valor_txt_pb_a3,
+    "A4": valor_txt_pb_a4,
+    "A5": valor_txt_pb_a5,
+    "A6": valor_txt_pb_a6,
+    "A7": valor_txt_pb_a7,
+    "A8": valor_txt_pb_a8,
+    "A9": valor_txt_pb_a9,
+    "A10": valor_txt_pb_a10
+}
+
+txt_img_pb = {
+    "A3": valor_txt_img_pb_a3,
+    "A4": valor_txt_img_pb_a4,
+    "A5": valor_txt_img_pb_a5,
+    "A6": valor_txt_img_pb_a6,
+    "A7": valor_txt_img_pb_a7,
+    "A8": valor_txt_img_pb_a8,
+    "A9": valor_txt_img_pb_a9,
+    "A10": valor_txt_img_pb_a10
+}
+
 ## Exibir valores de impressão
-print("-------------------------------------------------------------------")
-print("Valores de impressão A3")
-print("Print Textos PB A3 =", valor_txt_pb_a3)
-print("Print Textos e Imagens PB A3 =", valor_txt_img_pb_a3)
-print("Print Foto PB A3 =", valor_img_pb_a3)
-print("")
-print("Print Textos Cor A3 =", valor_txt_cor_a3)
-print("Print Textos e Imagens Cor A3 =", valor_txt_img_cor_a3)
-print('Print Foto Cor A3 =', valor_img_cor_a3)
-print("-------------------------------------------------------------------")
-print("")
+# print("-------------------------------------------------------------------")
+# print("Valores de impressão A3")
+# print("Print Textos PB A3 =", valor_txt_pb_a3)
+# print("Print Textos e Imagens PB A3 =", valor_txt_img_pb_a3)
+# print("Print Foto PB A3 =", valor_img_pb_a3)
+# print("")
+# print("Print Textos Cor A3 =", valor_txt_cor_a3)
+# print("Print Textos e Imagens Cor A3 =", valor_txt_img_cor_a3)
+# print('Print Foto Cor A3 =', valor_img_cor_a3)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A4")
-print("Print Textos PB A4 =", valor_txt_pb_a4)
-print("Print Textos e Imagens PB A4 =", valor_txt_img_pb_a4)
-print("Print Foto PB A4 =", valor_img_pb_a4)
-print("")
-print("Print Textos Cor A4 =", valor_txt_cor_a4)
-print("Print Textos e Imagens Cor A4 =", valor_txt_img_cor_a4)
-print('Print Foto Cor A4 =', valor_img_cor_a4)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A4")
+# print("Print Textos PB A4 =", valor_txt_pb_a4)
+# print("Print Textos e Imagens PB A4 =", valor_txt_img_pb_a4)
+# print("Print Foto PB A4 =", valor_img_pb_a4)
+# print("")
+# print("Print Textos Cor A4 =", valor_txt_cor_a4)
+# print("Print Textos e Imagens Cor A4 =", valor_txt_img_cor_a4)
+# print('Print Foto Cor A4 =', valor_img_cor_a4)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A5")
-print("Print Textos PB A5 =", valor_txt_pb_a5)
-print("Print Textos e Imagens PB A5 =", valor_txt_img_pb_a5)
-print("Print Foto PB A5 =", valor_img_pb_a5)
-print("")
-print("Print Textos Cor A5 =", valor_txt_cor_a5)
-print("Print Textos e Imagens Cor A5 =", valor_txt_img_cor_a5)
-print('Print Foto Cor A5 =', valor_img_cor_a5)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A5")
+# print("Print Textos PB A5 =", valor_txt_pb_a5)
+# print("Print Textos e Imagens PB A5 =", valor_txt_img_pb_a5)
+# print("Print Foto PB A5 =", valor_img_pb_a5)
+# print("")
+# print("Print Textos Cor A5 =", valor_txt_cor_a5)
+# print("Print Textos e Imagens Cor A5 =", valor_txt_img_cor_a5)
+# print('Print Foto Cor A5 =', valor_img_cor_a5)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A6")
-print("Print Textos PB A6 =", valor_txt_pb_a6)
-print("Print Textos e Imagens PB A6 =", valor_txt_img_pb_a6)
-print("Print Foto PB A6 =", valor_img_pb_a6)
-print("")
-print("Print Textos Cor A6 =", valor_txt_cor_a6)
-print("Print Textos e Imagens Cor A6 =", valor_txt_img_cor_a6)
-print('Print Foto Cor A6 =', valor_img_cor_a6)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A6")
+# print("Print Textos PB A6 =", valor_txt_pb_a6)
+# print("Print Textos e Imagens PB A6 =", valor_txt_img_pb_a6)
+# print("Print Foto PB A6 =", valor_img_pb_a6)
+# print("")
+# print("Print Textos Cor A6 =", valor_txt_cor_a6)
+# print("Print Textos e Imagens Cor A6 =", valor_txt_img_cor_a6)
+# print('Print Foto Cor A6 =', valor_img_cor_a6)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A7")
-print("Print Textos PB A7 =", valor_txt_pb_a7)
-print("Print Textos e Imagens PB A7 =", valor_txt_img_pb_a7)
-print("Print Foto PB A7 =", valor_img_pb_a7)
-print("")
-print("Print Textos Cor A7 =", valor_txt_cor_a7)
-print("Print Textos e Imagens Cor A7 =", valor_txt_img_cor_a7)
-print('Print Foto Cor A7 =', valor_img_cor_a7)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A7")
+# print("Print Textos PB A7 =", valor_txt_pb_a7)
+# print("Print Textos e Imagens PB A7 =", valor_txt_img_pb_a7)
+# print("Print Foto PB A7 =", valor_img_pb_a7)
+# print("")
+# print("Print Textos Cor A7 =", valor_txt_cor_a7)
+# print("Print Textos e Imagens Cor A7 =", valor_txt_img_cor_a7)
+# print('Print Foto Cor A7 =', valor_img_cor_a7)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A8")
-print("Print Textos PB A8 =", valor_txt_pb_a8)
-print("Print Textos e Imagens PB A8 =", valor_txt_img_pb_a8)
-print("Print Foto PB A8 =", valor_img_pb_a8)
-print("")
-print("Print Textos Cor A8 =", valor_txt_cor_a8)
-print("Print Textos e Imagens Cor A8 =", valor_txt_img_cor_a8)
-print('Print Foto Cor A8 =', valor_img_cor_a8)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A8")
+# print("Print Textos PB A8 =", valor_txt_pb_a8)
+# print("Print Textos e Imagens PB A8 =", valor_txt_img_pb_a8)
+# print("Print Foto PB A8 =", valor_img_pb_a8)
+# print("")
+# print("Print Textos Cor A8 =", valor_txt_cor_a8)
+# print("Print Textos e Imagens Cor A8 =", valor_txt_img_cor_a8)
+# print('Print Foto Cor A8 =', valor_img_cor_a8)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A9")
-print("Print Textos PB A9 =", valor_txt_pb_a9)
-print("Print Textos e Imagens PB A9 =", valor_txt_img_pb_a9)
-print("Print Foto PB A9 =", valor_img_pb_a9)
-print("")
-print("Print Textos Cor A9 =", valor_txt_cor_a9)
-print("Print Textos e Imagens Cor A9 =", valor_txt_img_cor_a9)
-print('Print Foto Cor A9 =', valor_img_cor_a9)
-print("-------------------------------------------------------------------")
-print("")
+# print("Valores de impressão A9")
+# print("Print Textos PB A9 =", valor_txt_pb_a9)
+# print("Print Textos e Imagens PB A9 =", valor_txt_img_pb_a9)
+# print("Print Foto PB A9 =", valor_img_pb_a9)
+# print("")
+# print("Print Textos Cor A9 =", valor_txt_cor_a9)
+# print("Print Textos e Imagens Cor A9 =", valor_txt_img_cor_a9)
+# print('Print Foto Cor A9 =', valor_img_cor_a9)
+# print("-------------------------------------------------------------------")
+# print("")
 
-print("Valores de impressão A10")
-print("Print Textos PB A10 =", valor_txt_pb_a10)
-print("Print Textos e Imagens PB A10 =", valor_txt_img_pb_a10)
-print("Print Foto PB A10 =", valor_img_pb_a10)
-print("")
-print("Print Textos Cor A10 =", valor_txt_cor_a10)
-print("Print Textos e Imagens Cor A10 =", valor_txt_img_cor_a10)
-print('Print Foto Cor A10 =', valor_img_cor_a10)
-print("-------------------------------------------------------------------")
-print("")
-
+# print("Valores de impressão A10")
+# print("Print Textos PB A10 =", valor_txt_pb_a10)
+# print("Print Textos e Imagens PB A10 =", valor_txt_img_pb_a10)
+# print("Print Foto PB A10 =", valor_img_pb_a10)
+# print("")
+# print("Print Textos Cor A10 =", valor_txt_cor_a10)
+# print("Print Textos e Imagens Cor A10 =", valor_txt_img_cor_a10)
+# print('Print Foto Cor A10 =', valor_img_cor_a10)
+# print("-------------------------------------------------------------------")
+# print("")

@@ -63,25 +63,30 @@ case $tipo_impressao in
 	fi
 
 	echo " "
-	echo "Quantas páginas inteiras com fotos coloridas terá o documento?"
+	echo "Quantas páginas inteiras com fotos coloridas terá o documento?" 
 	read -r qtd_print_img_cor
 	qtd_print_img_cor=$((qtd_print_img_cor))
+
 	echo " "
 	echo "Quantas páginas com textos e imagens coloridas terá o documento?"
 	read -r qtd_print_text_img_cor
 	qtd_print_text_img_cor=$((qtd_print_text_img_cor))
+
 	echo " "
 	echo "Quantas páginas com apenas textos coloridos terá o documento?"
 	read -r qtd_print_text_cor
 	qtd_print_text_cor=$((qtd_print_text_cor))
+
 	echo " "
 	echo "Quantas páginas inteiras com fotos preto e branco terá o documento?"
 	read -r qtd_print_img_pb
 	qtd_print_img_pb=$((qtd_print_img_pb))
+
 	echo " "
 	echo "Quantas páginas com textos e imagens preto e branco terá o documento?"
 	read -r qtd_print_text_img_pb
 	qtd_print_text_img_pb=$((qtd_print_text_img_pb))
+
 	echo " "
 	echo "Quantas páginas com apenas textos preto e branco terá o documento?"
 	read -r qtd_print_text_pb
@@ -104,4 +109,5 @@ case $tipo_impressao in
   *)
     echo "Opção inválida"
     ;;
-esac
+esac 
+
